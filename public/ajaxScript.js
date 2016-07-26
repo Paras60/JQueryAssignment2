@@ -4,15 +4,13 @@ $(document).ready(function(){
     	var title=$(".textClass").val();
         $.ajax({
         	type:'GET',
-        	url: 'http://localhost:8080/Players',	
+        	url: 'http://localhost:8080/Players?q='+title,	
         	dataType:'json',   
         	success: function(jsonData)
         	{
                     $(jsonData).each(function(i,val){
                         
-            			if(val.name.includes(title))
-            			{
-		             		var table = document.getElementById("myTable");
+            				var table = document.getElementById("myTable");
 		            		var row = table.insertRow();
 
 							var cell1 = row.insertCell(0);
@@ -37,7 +35,7 @@ $(document).ready(function(){
                             cell8.innerHTML = val.phone;
                             cell9.innerHTML = val.address;
                             cell10.innerHTML = '<button id="'+val.id+'" href="#myModal-1" class="update" data-toggle="modal">modify</button><br>'+'<button class="delete" id="'+val.id+'">delete</button>';								
-						}
+						
                     });
 
                     $(".update").click(function(){
@@ -58,7 +56,7 @@ $(document).ready(function(){
                         type:'PUT',
                         url: 'http://localhost:8080/Players/'+id,    
                         dataType:'json',
-                        data: JSON.stringify(modifyItem),
+                        data: JSON.modifyItem,
                         contentType: "application/json; charset=utf-8" , 
                         success: function(data)
                         {   
