@@ -7,7 +7,7 @@ body{
 	font-family: 'Philosopher', sans-serif;
 }
 
- 
+
 .abc{
 	border-radius:5px; 
 	margin-top: 20px;
@@ -41,18 +41,17 @@ body{
 }
 
 table, td {
-    border: 1px solid black;
-    margin-top: 60px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 30px;
-    padding-right: 30px;
-    font-weight: bold;
-    background-color:#EAF2F8;
+	border: 1px solid black;
+	margin-top: 60px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-left: 30px;
+	padding-right: 30px;
+	font-weight: bold;
+	background-color:#EAF2F8;
 }
 .textClass{
 	margin-top: 10px;
-	width: 300px;
 	border-radius: 10px;
 	background-color: #DAF7A6;
 }
